@@ -8,10 +8,13 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <link rel="stylesheet" href="css/leaflet.css">
         <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/leaflet-search.css">
         <style>
-        #map {
-            width: 1012px;
-            height: 667px;
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
         }
         </style>
         <title></title>
@@ -28,6 +31,7 @@
         <script src="js/rbush.min.js"></script>
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
+        <script src="js/leaflet-search.js"></script>
         <script src="data/3MileBuffer_1.js"></script>
         <script src="data/Buildings_2.js"></script>
         <script src="data/ParcelsCountyAssessor_3.js"></script>
@@ -730,6 +734,13 @@
         var baseMaps = {};
         L.control.layers(baseMaps,{'<img src="legend/CityBoundary_7.png" /> CityBoundary': layer_CityBoundary_7,'Zoning-GrowthClass2021_GJ<br /><table><tr><td style="text-align: center;"><img src="legend/ZoningGrowthClass2021_GJ_6_CC0.png" /></td><td>CC</td></tr><tr><td style="text-align: center;"><img src="legend/ZoningGrowthClass2021_GJ_6_HDR1.png" /></td><td>HDR</td></tr><tr><td style="text-align: center;"><img src="legend/ZoningGrowthClass2021_GJ_6_HP2.png" /></td><td>HP</td></tr><tr><td style="text-align: center;"><img src="legend/ZoningGrowthClass2021_GJ_6_I3.png" /></td><td>I</td></tr><tr><td style="text-align: center;"><img src="legend/ZoningGrowthClass2021_GJ_6_LDR4.png" /></td><td>LDR</td></tr><tr><td style="text-align: center;"><img src="legend/ZoningGrowthClass2021_GJ_6_MDR5.png" /></td><td>MDR</td></tr><tr><td style="text-align: center;"><img src="legend/ZoningGrowthClass2021_GJ_6_MHR6.png" /></td><td>MHR</td></tr><tr><td style="text-align: center;"><img src="legend/ZoningGrowthClass2021_GJ_6_NS7.png" /></td><td>NS</td></tr><tr><td style="text-align: center;"><img src="legend/ZoningGrowthClass2021_GJ_6_O8.png" /></td><td>O</td></tr><tr><td style="text-align: center;"><img src="legend/ZoningGrowthClass2021_GJ_6_PUD9.png" /></td><td>PUD</td></tr><tr><td style="text-align: center;"><img src="legend/ZoningGrowthClass2021_GJ_6_RD10.png" /></td><td>RD</td></tr><tr><td style="text-align: center;"><img src="legend/ZoningGrowthClass2021_GJ_6_RE11.png" /></td><td>RE</td></tr><tr><td style="text-align: center;"><img src="legend/ZoningGrowthClass2021_GJ_6_12.png" /></td><td></td></tr></table>': layer_ZoningGrowthClass2021_GJ_6,'<img src="legend/HIGHWAYS_5.png" /> HIGHWAYS': layer_HIGHWAYS_5,'Roads<br /><table><tr><td style="text-align: center;"><img src="legend/Roads_4_0.png" /></td><td></td></tr><tr><td style="text-align: center;"><img src="legend/Roads_4_41.png" /></td><td>4</td></tr><tr><td style="text-align: center;"><img src="legend/Roads_4_52.png" /></td><td>5</td></tr><tr><td style="text-align: center;"><img src="legend/Roads_4_63.png" /></td><td>6</td></tr><tr><td style="text-align: center;"><img src="legend/Roads_4_74.png" /></td><td>7</td></tr><tr><td style="text-align: center;"><img src="legend/Roads_4_R5.png" /></td><td>R</td></tr></table>': layer_Roads_4,'<img src="legend/ParcelsCountyAssessor_3.png" /> Parcels-County Assessor': layer_ParcelsCountyAssessor_3,'<img src="legend/Buildings_2.png" /> Buildings': layer_Buildings_2,'<img src="legend/3MileBuffer_1.png" /> 3-Mile Buffer': layer_3MileBuffer_1,"OSM Standard": layer_OSMStandard_0,},{collapsed:false}).addTo(map);
         setBounds();
+        map.addControl(new L.Control.Search({
+            layer: layer_ZoningGrowthClass2021_GJ_6,
+            initial: false,
+            hideMarkerOnCollapse: true,
+            propertyName: 'AddressLoc'}));
+        document.getElementsByClassName('search-button')[0].className +=
+         ' fa fa-binoculars';
         </script>
     </body>
 </html>
