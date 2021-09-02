@@ -213,7 +213,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillOpacity: .5,
                 fillColor: 'rgba(238,70,221,1.0)',
                 interactive: true,
             }
@@ -228,7 +228,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillOpacity: .5,
                 fillColor: 'rgba(142,142,103,1.0)',
                 interactive: true,
             }
@@ -243,7 +243,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillOpacity: .5,
                 fillColor: 'rgba(238,11,53,1.0)',
                 interactive: true,
             }
@@ -258,7 +258,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillOpacity: .5,
                 fillColor: 'rgba(193,154,234,1.0)',
                 interactive: true,
             }
@@ -273,7 +273,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillOpacity: .5,
                 fillColor: 'rgba(201,197,136,1.0)',
                 interactive: true,
             }
@@ -288,7 +288,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillOpacity: .5,
                 fillColor: 'rgba(107,186,141,1.0)',
                 interactive: true,
             }
@@ -303,7 +303,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillOpacity: .5,
                 fillColor: 'rgba(213,154,21,1.0)',
                 interactive: true,
             }
@@ -318,7 +318,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillOpacity: .5,
                 fillColor: 'rgba(250,183,223,1.0)',
                 interactive: true,
             }
@@ -333,7 +333,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillOpacity: .5,
                 fillColor: 'rgba(50,209,35,1.0)',
                 interactive: true,
             }
@@ -348,7 +348,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillOpacity: .5,
                 fillColor: 'rgba(160,220,220,1.0)',
                 interactive: true,
             }
@@ -363,7 +363,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillOpacity: .5,
                 fillColor: 'rgba(217,115,7,1.0)',
                 interactive: true,
             }
@@ -378,7 +378,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillOpacity: .5,
                 fillColor: 'rgba(35,115,250,1.0)',
                 interactive: true,
             }
@@ -393,7 +393,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillOpacity: .5,
                 fillColor: 'rgba(150,150,150,1.0)',
                 interactive: true,
             }
@@ -447,7 +447,7 @@
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['q2wHide_STREETNO'] !== null?String('<div style="color: #000102; font-size: 10pt; font-family: \'Cambria\', sans-serif;">' + layer.feature.properties['q2wHide_STREETNO']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_ZoningMap2021_3'});
+            layer.bindTooltip((layer.feature.properties['q2wHide_STREETNO'] !== null?String('<div style="color: #000102; font-size: 10pt; font-family: \'Cambria\', sans-serif;">' + layer.feature.properties['q2wnoHide_STREETNO']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_ZoningMap2021_3'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
