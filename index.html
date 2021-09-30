@@ -55,7 +55,7 @@
         }
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[37.13076635563526,-104.57077391057865],[37.226077632444294,-104.39977298227373]]);
+        }).fitBounds([[37.14635507972001,-104.53996732765229],[37.194015922383485,-104.46319688715147]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -131,7 +131,7 @@
                 lineJoin: 'bevel',
                 weight: 2.0,
                 fillOpacity: 0,
-                interactive: false,
+                interactive: true,
             }
         }
         map.createPane('pane_CityBoundary_2');
@@ -139,7 +139,7 @@
         map.getPane('pane_CityBoundary_2').style['mix-blend-mode'] = 'normal';
         var layer_CityBoundary_2 = new L.geoJson(json_CityBoundary_2, {
             attribution: '',
-            interactive: false,
+            interactive: true,
             dataVar: 'json_CityBoundary_2',
             layerName: 'layer_CityBoundary_2',
             pane: 'pane_CityBoundary_2',
@@ -213,7 +213,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: .5,
+                fillOpacity: 1,
                 fillColor: 'rgba(238,70,221,1.0)',
                 interactive: true,
             }
@@ -228,7 +228,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: .5,
+                fillOpacity: 1,
                 fillColor: 'rgba(142,142,103,1.0)',
                 interactive: true,
             }
@@ -243,7 +243,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: .5,
+                fillOpacity: 1,
                 fillColor: 'rgba(238,11,53,1.0)',
                 interactive: true,
             }
@@ -258,7 +258,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: .5,
+                fillOpacity: 1,
                 fillColor: 'rgba(193,154,234,1.0)',
                 interactive: true,
             }
@@ -273,7 +273,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: .5,
+                fillOpacity: 1,
                 fillColor: 'rgba(201,197,136,1.0)',
                 interactive: true,
             }
@@ -288,7 +288,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: .5,
+                fillOpacity: 1,
                 fillColor: 'rgba(107,186,141,1.0)',
                 interactive: true,
             }
@@ -303,7 +303,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: .5,
+                fillOpacity: 1,
                 fillColor: 'rgba(213,154,21,1.0)',
                 interactive: true,
             }
@@ -318,7 +318,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: .5,
+                fillOpacity: 1,
                 fillColor: 'rgba(250,183,223,1.0)',
                 interactive: true,
             }
@@ -333,7 +333,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: .5,
+                fillOpacity: 1,
                 fillColor: 'rgba(50,209,35,1.0)',
                 interactive: true,
             }
@@ -348,7 +348,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: .5,
+                fillOpacity: 1,
                 fillColor: 'rgba(160,220,220,1.0)',
                 interactive: true,
             }
@@ -363,7 +363,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: .5,
+                fillOpacity: 1,
                 fillColor: 'rgba(217,115,7,1.0)',
                 interactive: true,
             }
@@ -378,7 +378,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: .5,
+                fillOpacity: 1,
                 fillColor: 'rgba(35,115,250,1.0)',
                 interactive: true,
             }
@@ -393,7 +393,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: .5,
+                fillOpacity: 1,
                 fillColor: 'rgba(150,150,150,1.0)',
                 interactive: true,
             }
@@ -426,45 +426,7 @@
         .title += 'Search for a place';
         var baseMaps = {};
         L.control.layers(baseMaps,{'ZoningMap2021<br /><table><tr><td style="text-align: center;"><img src="legend/ZoningMap2021_3_CC0.png" /></td><td>CC</td></tr><tr><td style="text-align: center;"><img src="legend/ZoningMap2021_3_HDR1.png" /></td><td>HDR</td></tr><tr><td style="text-align: center;"><img src="legend/ZoningMap2021_3_HP2.png" /></td><td>HP</td></tr><tr><td style="text-align: center;"><img src="legend/ZoningMap2021_3_I3.png" /></td><td>I</td></tr><tr><td style="text-align: center;"><img src="legend/ZoningMap2021_3_LDR4.png" /></td><td>LDR</td></tr><tr><td style="text-align: center;"><img src="legend/ZoningMap2021_3_MDR5.png" /></td><td>MDR</td></tr><tr><td style="text-align: center;"><img src="legend/ZoningMap2021_3_MHR6.png" /></td><td>MHR</td></tr><tr><td style="text-align: center;"><img src="legend/ZoningMap2021_3_NS7.png" /></td><td>NS</td></tr><tr><td style="text-align: center;"><img src="legend/ZoningMap2021_3_O8.png" /></td><td>O</td></tr><tr><td style="text-align: center;"><img src="legend/ZoningMap2021_3_PUD9.png" /></td><td>PUD</td></tr><tr><td style="text-align: center;"><img src="legend/ZoningMap2021_3_RD10.png" /></td><td>RD</td></tr><tr><td style="text-align: center;"><img src="legend/ZoningMap2021_3_RE11.png" /></td><td>RE</td></tr><tr><td style="text-align: center;"><img src="legend/ZoningMap2021_3_12.png" /></td><td></td></tr></table>': layer_ZoningMap2021_3,'<img src="legend/CityBoundary_2.png" /> CityBoundary': layer_CityBoundary_2,"TIGER Roads 2017": layer_TIGERRoads2017_1,"ESRI Satellite (ArcGIS/World_Imagery)": layer_ESRISatelliteArcGISWorld_Imagery_0,},{collapsed:false}).addTo(map);
-        map.on("zoomend", function(){
-
-                if (map.hasLayer(layer_ZoningMap2021_3)) {
-                    if (map.getZoom() <= 16 && map.getZoom() >= 19) {
-                        layer_ZoningMap2021_3.eachLayer(function (layer) {
-                            layer.openTooltip();
-                        });
-                    } else {
-                        layer_ZoningMap2021_3.eachLayer(function (layer) {
-                            layer.closeTooltip();
-                        });
-                    }
-                }
-        });
         setBounds();
-        var i = 0;
-        layer_ZoningMap2021_3.eachLayer(function(layer) {
-            var context = {
-                feature: layer.feature,
-                variables: {}
-            };
-            layer.bindTooltip((layer.feature.properties['q2wHide_STREETNO'] !== null?String('<div style="color: #000102; font-size: 10pt; font-family: \'Cambria\', sans-serif;">' + layer.feature.properties['q2wnoHide_STREETNO']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_ZoningMap2021_3'});
-            labels.push(layer);
-            totalMarkers += 1;
-              layer.added = true;
-              addLabel(layer, i);
-              i++;
-        });
-                if (map.hasLayer(layer_ZoningMap2021_3)) {
-                    if (map.getZoom() <= 16 && map.getZoom() >= 19) {
-                        layer_ZoningMap2021_3.eachLayer(function (layer) {
-                            layer.openTooltip();
-                        });
-                    } else {
-                        layer_ZoningMap2021_3.eachLayer(function (layer) {
-                            layer.closeTooltip();
-                        });
-                    }
-                }
         map.addControl(new L.Control.Search({
             layer: layer_ZoningMap2021_3,
             initial: false,
@@ -472,16 +434,6 @@
             propertyName: 'FullAddres'}));
         document.getElementsByClassName('search-button')[0].className +=
          ' fa fa-binoculars';
-        resetLabels([layer_ZoningMap2021_3]);
-        map.on("zoomend", function(){
-            resetLabels([layer_ZoningMap2021_3]);
-        });
-        map.on("layeradd", function(){
-            resetLabels([layer_ZoningMap2021_3]);
-        });
-        map.on("layerremove", function(){
-            resetLabels([layer_ZoningMap2021_3]);
-        });
         </script>
     </body>
 </html>
