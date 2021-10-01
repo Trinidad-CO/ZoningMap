@@ -48,7 +48,7 @@
             } else {
               highlightLayer.setStyle({
                 fillColor: '#ffff00',
-                fillOpacity: 1
+                fillopacity: 0.6
               });
             }
             highlightLayer.openPopup();
@@ -66,7 +66,7 @@
         map.getPane('pane_ESRISatelliteArcGISWorld_Imagery_0').style.zIndex = 400;
         var layer_ESRISatelliteArcGISWorld_Imagery_0 = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
             pane: 'pane_ESRISatelliteArcGISWorld_Imagery_0',
-            opacity: 1.0,
+            opacity: 0.6,
             attribution: '',
             minZoom: 1,
             maxZoom: 28,
@@ -79,7 +79,7 @@
         map.getPane('pane_TIGERRoads2017_1').style.zIndex = 401;
         var layer_TIGERRoads2017_1 = L.tileLayer('https://b.tiles.mapbox.com/styles/v1/openstreetmapus/cj8dftc3q1ecn2tnx9qhwyj0c/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoib3BlbnN0cmVldG1hcHVzIiwiYSI6ImNpcnF4Ym43dDBoOXZmYW04bWhlNWdrY2EifQ.4SFexuTUuKkZeerO3dgtmw', {
             pane: 'pane_TIGERRoads2017_1',
-            opacity: 1.0,
+            opacity: 1,
             attribution: '',
             minZoom: 1,
             maxZoom: 28,
@@ -104,27 +104,13 @@
                 },
                 mouseover: highlightFeature,
             });
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['OBJECTID'] !== null ? autolinker.link(feature.properties['OBJECTID'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Id'] !== null ? autolinker.link(feature.properties['Id'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Shape_Length'] !== null ? autolinker.link(feature.properties['Shape_Length'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Shape_Area'] !== null ? autolinker.link(feature.properties['Shape_Area'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+           
         }
 
         function style_CityBoundary_2_0() {
             return {
                 pane: 'pane_CityBoundary_2',
-                opacity: 1,
+                opacity: 0.6,
                 color: 'rgba(248,241,26,1.0)',
                 dashArray: '',
                 lineCap: 'square',
@@ -164,41 +150,7 @@
                 },
                 mouseover: highlightFeature,
             });
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">Acres</th>\
-                        <td>' + (feature.properties['Acres'] !== null ? autolinker.link(feature.properties['Acres'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">ParcelNo</th>\
-                        <td>' + (feature.properties['ParcelNo'] !== null ? autolinker.link(feature.properties['ParcelNo'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">FullAddres</th>\
-                        <td>' + (feature.properties['FullAddres'] !== null ? autolinker.link(feature.properties['FullAddres'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">GrowthDist</th>\
-                        <td>' + (feature.properties['GrowthDist'] !== null ? autolinker.link(feature.properties['GrowthDist'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">ZoningCode</th>\
-                        <td>' + (feature.properties['ZoningCode'] !== null ? autolinker.link(feature.properties['ZoningCode'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">ZoneClass</th>\
-                        <td>' + (feature.properties['ZoneClass'] !== null ? autolinker.link(feature.properties['ZoneClass'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">GrowthClas</th>\
-                        <td>' + (feature.properties['GrowthClas'] !== null ? autolinker.link(feature.properties['GrowthClas'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">LegalDescr</th>\
-                        <td>' + (feature.properties['LegalDescr'] !== null ? autolinker.link(feature.properties['LegalDescr'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+           
         }
 
         function style_ZoningMap2021_3_0(feature) {
@@ -206,14 +158,14 @@
                 case 'CC':
                     return {
                 pane: 'pane_ZoningMap2021_3',
-                opacity: 1,
+                opacity: 0.6,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillopacity: 0.6,
                 fillColor: 'rgba(238,70,221,1.0)',
                 interactive: true,
             }
@@ -221,14 +173,14 @@
                 case 'HDR':
                     return {
                 pane: 'pane_ZoningMap2021_3',
-                opacity: 1,
+                opacity: 0.6,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillopacity: 0.6,
                 fillColor: 'rgba(142,142,103,1.0)',
                 interactive: true,
             }
@@ -236,14 +188,14 @@
                 case 'HP':
                     return {
                 pane: 'pane_ZoningMap2021_3',
-                opacity: 1,
+                opacity: 0.6,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillopacity: 0.6,
                 fillColor: 'rgba(238,11,53,1.0)',
                 interactive: true,
             }
@@ -251,14 +203,14 @@
                 case 'I':
                     return {
                 pane: 'pane_ZoningMap2021_3',
-                opacity: 1,
+                opacity: 0.6,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillopacity: 0.6,
                 fillColor: 'rgba(193,154,234,1.0)',
                 interactive: true,
             }
@@ -266,14 +218,14 @@
                 case 'LDR':
                     return {
                 pane: 'pane_ZoningMap2021_3',
-                opacity: 1,
+                opacity: 0.6,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillopacity: 0.6,
                 fillColor: 'rgba(201,197,136,1.0)',
                 interactive: true,
             }
@@ -281,14 +233,14 @@
                 case 'MDR':
                     return {
                 pane: 'pane_ZoningMap2021_3',
-                opacity: 1,
+                opacity: 0.6,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillopacity: 0.6,
                 fillColor: 'rgba(107,186,141,1.0)',
                 interactive: true,
             }
@@ -296,14 +248,14 @@
                 case 'MHR':
                     return {
                 pane: 'pane_ZoningMap2021_3',
-                opacity: 1,
+                opacity: 0.6,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillopacity: 0.6,
                 fillColor: 'rgba(213,154,21,1.0)',
                 interactive: true,
             }
@@ -311,14 +263,14 @@
                 case 'NS':
                     return {
                 pane: 'pane_ZoningMap2021_3',
-                opacity: 1,
+                opacity: 0.6,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillopacity: 0.6,
                 fillColor: 'rgba(250,183,223,1.0)',
                 interactive: true,
             }
@@ -326,14 +278,14 @@
                 case 'O':
                     return {
                 pane: 'pane_ZoningMap2021_3',
-                opacity: 1,
+                opacity: 0.6,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillopacity: 0.6,
                 fillColor: 'rgba(50,209,35,1.0)',
                 interactive: true,
             }
@@ -341,14 +293,14 @@
                 case 'PUD':
                     return {
                 pane: 'pane_ZoningMap2021_3',
-                opacity: 1,
+                opacity: 0.6,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillopacity: 0.6,
                 fillColor: 'rgba(160,220,220,1.0)',
                 interactive: true,
             }
@@ -356,14 +308,14 @@
                 case 'RD':
                     return {
                 pane: 'pane_ZoningMap2021_3',
-                opacity: 1,
+                opacity: 0.6,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillopacity: 0.6,
                 fillColor: 'rgba(217,115,7,1.0)',
                 interactive: true,
             }
@@ -371,14 +323,14 @@
                 case 'RE':
                     return {
                 pane: 'pane_ZoningMap2021_3',
-                opacity: 1,
+                opacity: 0.6,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillopacity: 0.6,
                 fillColor: 'rgba(35,115,250,1.0)',
                 interactive: true,
             }
@@ -386,14 +338,14 @@
                 default:
                     return {
                 pane: 'pane_ZoningMap2021_3',
-                opacity: 1,
+                opacity: 0.6,
                 color: 'rgba(247,247,247,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillopacity: 0.6,
                 fillColor: 'rgba(150,150,150,1.0)',
                 interactive: true,
             }
